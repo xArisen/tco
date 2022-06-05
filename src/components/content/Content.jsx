@@ -53,7 +53,7 @@ const Content = () => {
                 setManualArrayValue={setManualArrayValue}
                 onSubmitButtonClick={submitValues}/>
                 <DataDisplayCard isSubmitButtonClicked={isSubmitButtonClicked} isLoaded={isLoaded}
-                value={items}/>
+                value={items} error={error}/>
             </div>
         </div>
     );
