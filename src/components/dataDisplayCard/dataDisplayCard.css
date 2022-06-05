@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  padding-top: 10px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-p {
+  color: red;
+}

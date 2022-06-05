@@ -1,0 +1,18 @@
+.card {
+  width: 100%;
+}
+.p-card-body h4 {
+  margin: 0;
+}
+
+.p-card-content {
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  display: flex;
+}
+
+.p-card-content .field {
+  display: flex;
+  flex-direction: column;
+}
