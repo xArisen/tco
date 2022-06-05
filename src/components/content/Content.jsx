@@ -24,7 +24,7 @@ const Content = () => {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
             body: JSON.stringify({
-                "myJSON" : manualArrayValue.split(' '),
+                "myJSON" : manualArrayValue ? manualArrayValue.split(' ') : null,
                 "myS3" : bucketValue,
                 "myDB" : dynamoDbValue
             } )
