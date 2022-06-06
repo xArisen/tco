@@ -20,20 +20,24 @@ const Content = () => {
         setIsLoaded(false);
         setError(null);
         setItems(null);
-        fetch("https://dxfh674xwc.execute-api.us-east-1.amazonaws.com/prod/sort", {
+        fetch("https://djb0j2wvvi.execute-api.eu-central-1.amazonaws.com/Prod/sort", {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
             body: JSON.stringify({
-                "myJSON" : manualArrayValue ? manualArrayValue.split(' ') : null,
-                "myS3" : bucketValue,
-                "myDB" : dynamoDbValue
+                "default-numbers" : manualArrayValue ? manualArrayValue.split(' ').map(function(item) {
+    return parseInt(item, 10);
+}) : null,
+                "s3-bucket" : bucketValue,
+                "dynamodb-id" : dynamoDbValue
             } )
         })
         .then(res => res.json())
         .then(
             (result) => {
             setIsLoaded(true);
-            setItems(result.body);;
+            console.log(result);
+            const resultString = result.body.sorted.map(e => `${e} `)
+            setItems(resultString);
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow

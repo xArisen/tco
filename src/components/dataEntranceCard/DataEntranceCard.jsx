@@ -8,8 +8,9 @@ import { Button } from 'primereact/button';
 const DataEntranceCard = (props) => {
     const {setBucketValue, setDynamoDbValue, setManualArrayValue, onSubmitButtonClick} = props;
     const bucketValues = [
-        { name: 'New York', code: 'NY' },
-        { name: 'Rome', code: 'RM' }
+        { name: '01.json', code: '01.json' },
+        { name: '02.json', code: '02.json' },
+        { name: '03.json', code: '03.json' }
     ];
     const [selectedBucketValue, setSelectedBucketValue] = useState(null);
     const onBucketValueChange = (e) => {
@@ -30,8 +31,8 @@ const DataEntranceCard = (props) => {
 
     
     const dynamoDbValues = [
-        { name: 'New York', code: 'NY' },
-        { name: 'Rome', code: 'RM' }
+        { name: '1', code: '1' },
+        { name: '2', code: '2' }
     ];
     const [selectedDynamoDbValue, setSelectedDynamoDbValue] = useState(null);
     const onDynamoDbValueChange = (e) => {
